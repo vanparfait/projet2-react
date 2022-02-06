@@ -1,6 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route} from "react-router-dom";
-//import { Switch } from "react-router-dom/cjs/react-router-dom.min";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
@@ -10,11 +9,11 @@ import NotFound from "./pages/NotFound";
 const App = () => {
     return (
         <BrowserRouter>
-            <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/a-propos" component={About} />
+            <Routes>
+                <Route exact path="/" element={<Home />} />
+                <Route exact path="/a-propos" element={<About />} />
                 <Route  component={NotFound} />
-            </Switch>
+            </Routes>
         </BrowserRouter>
         
 
